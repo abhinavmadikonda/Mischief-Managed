@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mischief Managed</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="homeScreenMusic" controls autoplay hidden>
+        <source src="resources/audio/background-music.mp3">
+    </audio>
+
+    <div class="background"></div>
+
+    <div class="text-block">
+        <h4>Open the door?</h4>
+        <p>Hint: Use Alohomora spell</p>
+        <button onclick="startRecognition()">Speak</button>
+        <p id="output"></p>
+    </div>
+    <script type="text/javascript" src="speechToTextConnector.js"></script>
+</body>
+</html>
