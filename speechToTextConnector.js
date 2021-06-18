@@ -6,7 +6,7 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent
 
-var openSpells = ['alohomora', 'open', 'lumos maxima'];
+var openSpells = ['alohomora', 'open the door', 'lumos maxima', 'Mischief Managed'];
 var grammar =  '#JSGF V1.0; grammar openSpells; public <openSpell> = ' + openSpells.join(' | ') + ' ;'
 
 var recognition = new SpeechRecognition();
@@ -79,13 +79,17 @@ function checkConnectivity(){
 function nextScreen(spell) { 
     switch(spell.toString().toLowerCase()){
         case 'alohomora':
-        case 'open': {
+        case 'open the door': {
             containerId.style.backgroundImage ="url('resources/images/light.jpg')";
             containerId.style.filter= "brightness(25%)";
             break;
             }
         case 'lumos maxima': {
             containerId.style.filter= "brightness(120%)";
+            break;
+        }
+        case 'mischief managed': {
+            containerId.style.backgroundImage ="url('resources/images/Thankyou.png')";
             break;
         }
     } 
